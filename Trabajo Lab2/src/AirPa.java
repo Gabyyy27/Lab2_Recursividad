@@ -10,13 +10,14 @@
  */
 public class AirPa extends javax.swing.JFrame {
 
+    public PalindromoAir Air;
     /**
      * Creates new form AirPa
      */
     
     public AirPa() {
         initComponents();
-        PalindromoAir palindromoAir = new PalindromoAir();
+         Air = new PalindromoAir();
         this.setLocationRelativeTo(null);
         
     }
@@ -34,6 +35,11 @@ public class AirPa extends javax.swing.JFrame {
         NombrePasajero = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btnVENDER = new javax.swing.JButton();
+        Cancelar_B = new javax.swing.JDialog();
+        jLabel2 = new javax.swing.JLabel();
+        NombrePasajeroCANCELAR = new javax.swing.JTextField();
+        btnCANCELAR = new javax.swing.JButton();
+        MOSTRAR_PASAJEROS = new javax.swing.JDialog();
         jPanel1 = new javax.swing.JPanel();
         VENDER = new javax.swing.JButton();
         CANCELAR = new javax.swing.JButton();
@@ -42,6 +48,12 @@ public class AirPa extends javax.swing.JFrame {
         DESPACHAR = new javax.swing.JButton();
         REINICIAR = new javax.swing.JButton();
         BUSCAR = new javax.swing.JButton();
+
+        NombrePasajero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombrePasajeroActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Ingrese Nombre");
 
@@ -78,6 +90,49 @@ public class AirPa extends javax.swing.JFrame {
                 .addGap(76, 76, 76)
                 .addComponent(btnVENDER)
                 .addContainerGap(76, Short.MAX_VALUE))
+        );
+
+        jLabel2.setText("Nombre del Pasajero: ");
+
+        btnCANCELAR.setBackground(new java.awt.Color(255, 0, 0));
+        btnCANCELAR.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnCANCELAR.setText("CANCELAR");
+
+        javax.swing.GroupLayout Cancelar_BLayout = new javax.swing.GroupLayout(Cancelar_B.getContentPane());
+        Cancelar_B.getContentPane().setLayout(Cancelar_BLayout);
+        Cancelar_BLayout.setHorizontalGroup(
+            Cancelar_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Cancelar_BLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(Cancelar_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnCANCELAR)
+                    .addGroup(Cancelar_BLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(NombrePasajeroCANCELAR, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(85, Short.MAX_VALUE))
+        );
+        Cancelar_BLayout.setVerticalGroup(
+            Cancelar_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Cancelar_BLayout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addGroup(Cancelar_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(NombrePasajeroCANCELAR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60)
+                .addComponent(btnCANCELAR)
+                .addContainerGap(89, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout MOSTRAR_PASAJEROSLayout = new javax.swing.GroupLayout(MOSTRAR_PASAJEROS.getContentPane());
+        MOSTRAR_PASAJEROS.getContentPane().setLayout(MOSTRAR_PASAJEROSLayout);
+        MOSTRAR_PASAJEROSLayout.setHorizontalGroup(
+            MOSTRAR_PASAJEROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        MOSTRAR_PASAJEROSLayout.setVerticalGroup(
+            MOSTRAR_PASAJEROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -183,8 +238,12 @@ public class AirPa extends javax.swing.JFrame {
         // TODO add your handling code here:
         String nombrePasajero = NombrePasajero.getText();
 
-        palindromoAir.sellTicket(nombrePasajero);
+           Air.sellTicket(nombrePasajero);
     }//GEN-LAST:event_btnVENDERActionPerformed
+
+    private void NombrePasajeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombrePasajeroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombrePasajeroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,15 +283,20 @@ public class AirPa extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BUSCAR;
     private javax.swing.JButton CANCELAR;
+    private javax.swing.JDialog Cancelar_B;
     private javax.swing.JButton DESPACHAR;
     private javax.swing.JButton INGRESOS;
     private javax.swing.JButton MOSTRAR;
+    private javax.swing.JDialog MOSTRAR_PASAJEROS;
     private javax.swing.JTextField NombrePasajero;
+    private javax.swing.JTextField NombrePasajeroCANCELAR;
     private javax.swing.JButton REINICIAR;
     private javax.swing.JButton VENDER;
     private javax.swing.JDialog VENDER_B;
+    private javax.swing.JButton btnCANCELAR;
     private javax.swing.JButton btnVENDER;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
