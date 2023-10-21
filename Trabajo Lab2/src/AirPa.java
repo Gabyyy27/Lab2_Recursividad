@@ -1,25 +1,27 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author porti
  */
 public class AirPa extends javax.swing.JFrame {
 
-    public PalindromoAir Air;
+    public PalindromAir Air;
+
     /**
      * Creates new form AirPa
      */
-    
     public AirPa() {
         initComponents();
-         Air = new PalindromoAir();
+        Air = new PalindromAir();
         this.setLocationRelativeTo(null);
-        
+
     }
 
     /**
@@ -31,7 +33,7 @@ public class AirPa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        VENDER_B = new javax.swing.JDialog();
+        VENDER_Boleto = new javax.swing.JDialog();
         NombrePasajero = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btnVENDER = new javax.swing.JButton();
@@ -65,26 +67,26 @@ public class AirPa extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout VENDER_BLayout = new javax.swing.GroupLayout(VENDER_B.getContentPane());
-        VENDER_B.getContentPane().setLayout(VENDER_BLayout);
-        VENDER_BLayout.setHorizontalGroup(
-            VENDER_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(VENDER_BLayout.createSequentialGroup()
+        javax.swing.GroupLayout VENDER_BoletoLayout = new javax.swing.GroupLayout(VENDER_Boleto.getContentPane());
+        VENDER_Boleto.getContentPane().setLayout(VENDER_BoletoLayout);
+        VENDER_BoletoLayout.setHorizontalGroup(
+            VENDER_BoletoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VENDER_BoletoLayout.createSequentialGroup()
                 .addGap(75, 75, 75)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(NombrePasajero, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(82, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VENDER_BLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VENDER_BoletoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnVENDER)
                 .addGap(62, 62, 62))
         );
-        VENDER_BLayout.setVerticalGroup(
-            VENDER_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(VENDER_BLayout.createSequentialGroup()
+        VENDER_BoletoLayout.setVerticalGroup(
+            VENDER_BoletoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VENDER_BoletoLayout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addGroup(VENDER_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(VENDER_BoletoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NombrePasajero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(76, 76, 76)
@@ -97,6 +99,11 @@ public class AirPa extends javax.swing.JFrame {
         btnCANCELAR.setBackground(new java.awt.Color(255, 0, 0));
         btnCANCELAR.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnCANCELAR.setText("CANCELAR");
+        btnCANCELAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCANCELARActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Cancelar_BLayout = new javax.swing.GroupLayout(Cancelar_B.getContentPane());
         Cancelar_B.getContentPane().setLayout(Cancelar_BLayout);
@@ -151,22 +158,47 @@ public class AirPa extends javax.swing.JFrame {
         CANCELAR.setBackground(new java.awt.Color(0, 153, 153));
         CANCELAR.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         CANCELAR.setText("CANCELAR BOLETO");
+        CANCELAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CANCELARActionPerformed(evt);
+            }
+        });
 
         MOSTRAR.setBackground(new java.awt.Color(0, 153, 153));
         MOSTRAR.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         MOSTRAR.setText("MOSTRAR PASAJEROS");
+        MOSTRAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MOSTRARActionPerformed(evt);
+            }
+        });
 
         INGRESOS.setBackground(new java.awt.Color(0, 153, 153));
         INGRESOS.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         INGRESOS.setText("INGRESOS TOTALES");
+        INGRESOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                INGRESOSActionPerformed(evt);
+            }
+        });
 
         DESPACHAR.setBackground(new java.awt.Color(0, 153, 153));
         DESPACHAR.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         DESPACHAR.setText("DESPACHAR AVION");
+        DESPACHAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DESPACHARActionPerformed(evt);
+            }
+        });
 
         REINICIAR.setBackground(new java.awt.Color(0, 153, 153));
         REINICIAR.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         REINICIAR.setText("REINICIAR ASIENTOS");
+        REINICIAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                REINICIARActionPerformed(evt);
+            }
+        });
 
         BUSCAR.setBackground(new java.awt.Color(0, 153, 153));
         BUSCAR.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -176,22 +208,29 @@ public class AirPa extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(158, 158, 158)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(DESPACHAR)
-                        .addGap(37, 37, 37)
-                        .addComponent(REINICIAR))
-                    .addComponent(INGRESOS)
-                    .addComponent(MOSTRAR)
-                    .addComponent(CANCELAR)
-                    .addComponent(VENDER))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BUSCAR)
                 .addGap(37, 37, 37))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CANCELAR)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(VENDER))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(DESPACHAR)
+                                    .addComponent(INGRESOS))
+                                .addGap(33, 33, 33)
+                                .addComponent(REINICIAR))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(MOSTRAR)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,21 +268,83 @@ public class AirPa extends javax.swing.JFrame {
 
     private void VENDERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VENDERActionPerformed
         // TODO add your handling code here:
-        this.VENDER_B.setVisible(true);
-        VENDER_B.setSize(400, 300);
-        VENDER_B.setLocationRelativeTo(null);
+        this.VENDER_Boleto.setVisible(true);
+        VENDER_Boleto.setSize(400, 300);
+        VENDER_Boleto.setLocationRelativeTo(null);
     }//GEN-LAST:event_VENDERActionPerformed
 
     private void btnVENDERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVENDERActionPerformed
         // TODO add your handling code here:
         String nombrePasajero = NombrePasajero.getText();
 
-           Air.sellTicket(nombrePasajero);
+         boolean ventaExitosa = Air.sellTicket(nombrePasajero);
+
+        if (ventaExitosa) {
+            // Mostrar un mensaje de éxito en la interfaz gráfica
+            JOptionPane.showMessageDialog(null, "Boleto vendido con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "No se pudo vender el boleto.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnVENDERActionPerformed
 
     private void NombrePasajeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombrePasajeroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NombrePasajeroActionPerformed
+
+    private void btnCANCELARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCANCELARActionPerformed
+        String nombrePasajero = NombrePasajeroCANCELAR.getText(); // Obtener el nombre del campo de texto
+
+        boolean boletoCancelado = Air.cancelTicket(nombrePasajero);
+
+        if (boletoCancelado) {
+            JOptionPane.showMessageDialog(null, "Boleto cancelado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "El pasajero o boleto no fue encontrado.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_btnCANCELARActionPerformed
+
+    private void CANCELARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CANCELARActionPerformed
+        // TODO add your handling code here:
+        this.Cancelar_B.setVisible(true);
+        Cancelar_B.setSize(400, 300);
+        Cancelar_B.setLocationRelativeTo(null);
+    }//GEN-LAST:event_CANCELARActionPerformed
+
+    private void MOSTRARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MOSTRARActionPerformed
+         String pasajeros = Air.printPassengers();
+
+    if (!pasajeros.isEmpty()) {
+        JOptionPane.showMessageDialog(null, pasajeros, "Pasajeros", JOptionPane.INFORMATION_MESSAGE);
+    } else {
+        JOptionPane.showMessageDialog(null, "No hay pasajeros en el avión.", "Información", JOptionPane.INFORMATION_MESSAGE);
+    }
+    }//GEN-LAST:event_MOSTRARActionPerformed
+
+    private void INGRESOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_INGRESOSActionPerformed
+        // TODO add your handling code here:
+           double ingresos = Air.income();
+
+        // Mostrar los ingresos totales en un cuadro de diálogo
+        JOptionPane.showMessageDialog(null, "Ingresos totales: $" + ingresos, "Ingresos Totales", JOptionPane.INFORMATION_MESSAGE);
+    
+    }//GEN-LAST:event_INGRESOSActionPerformed
+
+    private void REINICIARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REINICIARActionPerformed
+
+        Air.reset();
+
+        // Mostrar un mensaje de éxito en la interfaz gráfica
+        JOptionPane.showMessageDialog(null, "Los asientos han sido reiniciados.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+    
+    }//GEN-LAST:event_REINICIARActionPerformed
+
+    private void DESPACHARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DESPACHARActionPerformed
+
+        Air.dispatch();
+        JOptionPane.showMessageDialog(null, "El avión ha sido despachado exitosamente.", "Despacho Exitoso", JOptionPane.INFORMATION_MESSAGE);
+
+    }//GEN-LAST:event_DESPACHARActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,7 +393,7 @@ public class AirPa extends javax.swing.JFrame {
     private javax.swing.JTextField NombrePasajeroCANCELAR;
     private javax.swing.JButton REINICIAR;
     private javax.swing.JButton VENDER;
-    private javax.swing.JDialog VENDER_B;
+    private javax.swing.JDialog VENDER_Boleto;
     private javax.swing.JButton btnCANCELAR;
     private javax.swing.JButton btnVENDER;
     private javax.swing.JLabel jLabel1;
