@@ -42,6 +42,10 @@ public class AirPa extends javax.swing.JFrame {
         NombrePasajeroCANCELAR = new javax.swing.JTextField();
         btnCANCELAR = new javax.swing.JButton();
         MOSTRAR_PASAJEROS = new javax.swing.JDialog();
+        BUSCAR_PASAJEROS = new javax.swing.JDialog();
+        jLabel3 = new javax.swing.JLabel();
+        BUSCAR_NOMBRE = new javax.swing.JTextField();
+        BTN_BUSCAR = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         VENDER = new javax.swing.JButton();
         CANCELAR = new javax.swing.JButton();
@@ -142,6 +146,49 @@ public class AirPa extends javax.swing.JFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
+        BUSCAR_PASAJEROS.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel3.setText("INGRESE EL NOMBRE DEL PASAJERO:");
+
+        BTN_BUSCAR.setBackground(new java.awt.Color(153, 0, 0));
+        BTN_BUSCAR.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        BTN_BUSCAR.setText("BUSCAR");
+        BTN_BUSCAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTN_BUSCARActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout BUSCAR_PASAJEROSLayout = new javax.swing.GroupLayout(BUSCAR_PASAJEROS.getContentPane());
+        BUSCAR_PASAJEROS.getContentPane().setLayout(BUSCAR_PASAJEROSLayout);
+        BUSCAR_PASAJEROSLayout.setHorizontalGroup(
+            BUSCAR_PASAJEROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BUSCAR_PASAJEROSLayout.createSequentialGroup()
+                .addGroup(BUSCAR_PASAJEROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BUSCAR_PASAJEROSLayout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addComponent(jLabel3))
+                    .addGroup(BUSCAR_PASAJEROSLayout.createSequentialGroup()
+                        .addGap(86, 86, 86)
+                        .addComponent(BUSCAR_NOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(90, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BUSCAR_PASAJEROSLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(BTN_BUSCAR)
+                .addGap(67, 67, 67))
+        );
+        BUSCAR_PASAJEROSLayout.setVerticalGroup(
+            BUSCAR_PASAJEROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BUSCAR_PASAJEROSLayout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addComponent(jLabel3)
+                .addGap(35, 35, 35)
+                .addComponent(BUSCAR_NOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addComponent(BTN_BUSCAR)
+                .addGap(65, 65, 65))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 102));
@@ -203,6 +250,11 @@ public class AirPa extends javax.swing.JFrame {
         BUSCAR.setBackground(new java.awt.Color(0, 153, 153));
         BUSCAR.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BUSCAR.setText("BUSCAR");
+        BUSCAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BUSCARActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -277,7 +329,7 @@ public class AirPa extends javax.swing.JFrame {
         // TODO add your handling code here:
         String nombrePasajero = NombrePasajero.getText();
 
-         boolean ventaExitosa = Air.sellTicket(nombrePasajero);
+        boolean ventaExitosa = Air.sellTicket(nombrePasajero);
 
         if (ventaExitosa) {
             // Mostrar un mensaje de éxito en la interfaz gráfica
@@ -312,22 +364,22 @@ public class AirPa extends javax.swing.JFrame {
     }//GEN-LAST:event_CANCELARActionPerformed
 
     private void MOSTRARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MOSTRARActionPerformed
-         String pasajeros = Air.printPassengers();
+        String pasajeros = Air.printPassengers();
 
-    if (!pasajeros.isEmpty()) {
-        JOptionPane.showMessageDialog(null, pasajeros, "Pasajeros", JOptionPane.INFORMATION_MESSAGE);
-    } else {
-        JOptionPane.showMessageDialog(null, "No hay pasajeros en el avión.", "Información", JOptionPane.INFORMATION_MESSAGE);
-    }
+        if (!pasajeros.isEmpty()) {
+            JOptionPane.showMessageDialog(null, pasajeros, "Pasajeros", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay pasajeros en el avión.", "Información", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_MOSTRARActionPerformed
 
     private void INGRESOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_INGRESOSActionPerformed
         // TODO add your handling code here:
-           double ingresos = Air.income();
+        double ingresos = Air.income();
 
         // Mostrar los ingresos totales en un cuadro de diálogo
         JOptionPane.showMessageDialog(null, "Ingresos totales: $" + ingresos, "Ingresos Totales", JOptionPane.INFORMATION_MESSAGE);
-    
+
     }//GEN-LAST:event_INGRESOSActionPerformed
 
     private void REINICIARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REINICIARActionPerformed
@@ -336,7 +388,7 @@ public class AirPa extends javax.swing.JFrame {
 
         // Mostrar un mensaje de éxito en la interfaz gráfica
         JOptionPane.showMessageDialog(null, "Los asientos han sido reiniciados.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-    
+
     }//GEN-LAST:event_REINICIARActionPerformed
 
     private void DESPACHARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DESPACHARActionPerformed
@@ -345,6 +397,28 @@ public class AirPa extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "El avión ha sido despachado exitosamente.", "Despacho Exitoso", JOptionPane.INFORMATION_MESSAGE);
 
     }//GEN-LAST:event_DESPACHARActionPerformed
+
+    private void BTN_BUSCARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_BUSCARActionPerformed
+        // TODO add your handling code here:
+        String nombrePasajero = BUSCAR_NOMBRE.getText();;
+        int asientoEncontrado = Air.searchPassenger(nombrePasajero);
+
+        if (asientoEncontrado != -1) {
+            // Mostrar un mensaje con la posición del asiento en un cuadro de diálogo
+            JOptionPane.showMessageDialog(null, "El pasajero " + nombrePasajero + " está en el asiento " + asientoEncontrado, "Pasajero Encontrado", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            // Mostrar un mensaje si el pasajero no se encontró en un cuadro de diálogo
+            JOptionPane.showMessageDialog(null, "El pasajero " + nombrePasajero + " no se encuentra en el avión.", "Pasajero No Encontrado", JOptionPane.INFORMATION_MESSAGE);
+        }
+
+    }//GEN-LAST:event_BTN_BUSCARActionPerformed
+
+    private void BUSCARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BUSCARActionPerformed
+        // TODO add your handling code here:
+        this.BUSCAR_PASAJEROS.setVisible(true);
+        BUSCAR_PASAJEROS.setSize(400, 300);
+        BUSCAR_PASAJEROS.setLocationRelativeTo(null);
+    }//GEN-LAST:event_BUSCARActionPerformed
 
     /**
      * @param args the command line arguments
@@ -382,7 +456,10 @@ public class AirPa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BTN_BUSCAR;
     private javax.swing.JButton BUSCAR;
+    private javax.swing.JTextField BUSCAR_NOMBRE;
+    private javax.swing.JDialog BUSCAR_PASAJEROS;
     private javax.swing.JButton CANCELAR;
     private javax.swing.JDialog Cancelar_B;
     private javax.swing.JButton DESPACHAR;
@@ -398,6 +475,7 @@ public class AirPa extends javax.swing.JFrame {
     private javax.swing.JButton btnVENDER;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
