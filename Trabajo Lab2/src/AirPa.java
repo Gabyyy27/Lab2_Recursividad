@@ -54,6 +54,7 @@ public class AirPa extends javax.swing.JFrame {
         DESPACHAR = new javax.swing.JButton();
         REINICIAR = new javax.swing.JButton();
         BUSCAR = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         NombrePasajero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,8 +147,10 @@ public class AirPa extends javax.swing.JFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
-        BUSCAR_PASAJEROS.setBackground(new java.awt.Color(255, 255, 255));
+        BUSCAR_PASAJEROS.setTitle("BUSCAR PASAJEROS");
+        BUSCAR_PASAJEROS.setBackground(new java.awt.Color(51, 51, 51));
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("INGRESE EL NOMBRE DEL PASAJERO:");
 
         BTN_BUSCAR.setBackground(new java.awt.Color(153, 0, 0));
@@ -164,36 +167,34 @@ public class AirPa extends javax.swing.JFrame {
         BUSCAR_PASAJEROSLayout.setHorizontalGroup(
             BUSCAR_PASAJEROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BUSCAR_PASAJEROSLayout.createSequentialGroup()
+                .addGap(0, 72, Short.MAX_VALUE)
                 .addGroup(BUSCAR_PASAJEROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BUSCAR_PASAJEROSLayout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addComponent(jLabel3))
-                    .addGroup(BUSCAR_PASAJEROSLayout.createSequentialGroup()
-                        .addGap(86, 86, 86)
-                        .addComponent(BUSCAR_NOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(90, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BUSCAR_PASAJEROSLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(BTN_BUSCAR)
-                .addGap(67, 67, 67))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BUSCAR_PASAJEROSLayout.createSequentialGroup()
+                        .addGroup(BUSCAR_PASAJEROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(BUSCAR_NOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(67, 67, 67))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BUSCAR_PASAJEROSLayout.createSequentialGroup()
+                        .addComponent(BTN_BUSCAR, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45))))
         );
         BUSCAR_PASAJEROSLayout.setVerticalGroup(
             BUSCAR_PASAJEROSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BUSCAR_PASAJEROSLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addContainerGap(87, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addGap(35, 35, 35)
-                .addComponent(BUSCAR_NOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
-                .addComponent(BTN_BUSCAR)
-                .addGap(65, 65, 65))
+                .addGap(32, 32, 32)
+                .addComponent(BUSCAR_NOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(BTN_BUSCAR, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 102));
 
-        VENDER.setBackground(new java.awt.Color(0, 153, 153));
+        VENDER.setBackground(new java.awt.Color(0, 102, 102));
         VENDER.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         VENDER.setText("VENDER BOLETO");
         VENDER.addActionListener(new java.awt.event.ActionListener() {
@@ -202,7 +203,7 @@ public class AirPa extends javax.swing.JFrame {
             }
         });
 
-        CANCELAR.setBackground(new java.awt.Color(0, 153, 153));
+        CANCELAR.setBackground(new java.awt.Color(0, 102, 102));
         CANCELAR.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         CANCELAR.setText("CANCELAR BOLETO");
         CANCELAR.addActionListener(new java.awt.event.ActionListener() {
@@ -211,7 +212,7 @@ public class AirPa extends javax.swing.JFrame {
             }
         });
 
-        MOSTRAR.setBackground(new java.awt.Color(0, 153, 153));
+        MOSTRAR.setBackground(new java.awt.Color(0, 102, 102));
         MOSTRAR.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         MOSTRAR.setText("MOSTRAR PASAJEROS");
         MOSTRAR.addActionListener(new java.awt.event.ActionListener() {
@@ -220,7 +221,7 @@ public class AirPa extends javax.swing.JFrame {
             }
         });
 
-        INGRESOS.setBackground(new java.awt.Color(0, 153, 153));
+        INGRESOS.setBackground(new java.awt.Color(0, 102, 102));
         INGRESOS.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         INGRESOS.setText("INGRESOS TOTALES");
         INGRESOS.addActionListener(new java.awt.event.ActionListener() {
@@ -229,7 +230,7 @@ public class AirPa extends javax.swing.JFrame {
             }
         });
 
-        DESPACHAR.setBackground(new java.awt.Color(0, 153, 153));
+        DESPACHAR.setBackground(new java.awt.Color(0, 102, 102));
         DESPACHAR.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         DESPACHAR.setText("DESPACHAR AVION");
         DESPACHAR.addActionListener(new java.awt.event.ActionListener() {
@@ -238,7 +239,7 @@ public class AirPa extends javax.swing.JFrame {
             }
         });
 
-        REINICIAR.setBackground(new java.awt.Color(0, 153, 153));
+        REINICIAR.setBackground(new java.awt.Color(0, 102, 102));
         REINICIAR.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         REINICIAR.setText("REINICIAR ASIENTOS");
         REINICIAR.addActionListener(new java.awt.event.ActionListener() {
@@ -247,7 +248,7 @@ public class AirPa extends javax.swing.JFrame {
             }
         });
 
-        BUSCAR.setBackground(new java.awt.Color(0, 153, 153));
+        BUSCAR.setBackground(new java.awt.Color(0, 102, 102));
         BUSCAR.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BUSCAR.setText("BUSCAR");
         BUSCAR.addActionListener(new java.awt.event.ActionListener() {
@@ -256,40 +257,40 @@ public class AirPa extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Serif", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("AERO VICTORIA");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BUSCAR)
-                .addGap(37, 37, 37))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CANCELAR)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(VENDER))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(DESPACHAR)
-                                    .addComponent(INGRESOS))
-                                .addGap(33, 33, 33)
-                                .addComponent(REINICIAR))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(MOSTRAR)))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(188, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(0, 0, Short.MAX_VALUE)
+                            .addComponent(INGRESOS, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(MOSTRAR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(VENDER, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(CANCELAR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(DESPACHAR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(REINICIAR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(78, 78, 78)
+                .addComponent(BUSCAR)
+                .addGap(43, 43, 43))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(BUSCAR)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGap(35, 35, 35)
+                .addComponent(jLabel4)
+                .addGap(34, 34, 34)
                 .addComponent(VENDER)
                 .addGap(18, 18, 18)
                 .addComponent(CANCELAR)
@@ -298,10 +299,12 @@ public class AirPa extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(INGRESOS)
                 .addGap(18, 18, 18)
+                .addComponent(DESPACHAR)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DESPACHAR)
-                    .addComponent(REINICIAR))
-                .addGap(45, 45, 45))
+                    .addComponent(REINICIAR)
+                    .addComponent(BUSCAR))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -476,6 +479,7 @@ public class AirPa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
