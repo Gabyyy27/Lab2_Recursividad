@@ -37,10 +37,12 @@ public class AirPa extends javax.swing.JFrame {
         NombrePasajero = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btnVENDER = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         Cancelar_B = new javax.swing.JDialog();
-        jLabel2 = new javax.swing.JLabel();
         NombrePasajeroCANCELAR = new javax.swing.JTextField();
         btnCANCELAR = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         MOSTRAR_PASAJEROS = new javax.swing.JDialog();
         BUSCAR_PASAJEROS = new javax.swing.JDialog();
         jLabel3 = new javax.swing.JLabel();
@@ -62,9 +64,11 @@ public class AirPa extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Ingrese Nombre");
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        jLabel1.setText("Ingrese Nombre:");
 
         btnVENDER.setBackground(new java.awt.Color(0, 204, 0));
+        btnVENDER.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
         btnVENDER.setText("VENDER");
         btnVENDER.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,37 +76,47 @@ public class AirPa extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setBackground(new java.awt.Color(153, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+        jLabel5.setText("VENTA DE BOLETOS");
+
         javax.swing.GroupLayout VENDER_BoletoLayout = new javax.swing.GroupLayout(VENDER_Boleto.getContentPane());
         VENDER_Boleto.getContentPane().setLayout(VENDER_BoletoLayout);
         VENDER_BoletoLayout.setHorizontalGroup(
             VENDER_BoletoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(VENDER_BoletoLayout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(NombrePasajero, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addGroup(VENDER_BoletoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(VENDER_BoletoLayout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addComponent(jLabel1))
+                    .addGroup(VENDER_BoletoLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(NombrePasajero, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(VENDER_BoletoLayout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel5)))
+                .addContainerGap(95, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VENDER_BoletoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnVENDER)
-                .addGap(62, 62, 62))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnVENDER, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50))
         );
         VENDER_BoletoLayout.setVerticalGroup(
             VENDER_BoletoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(VENDER_BoletoLayout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addGroup(VENDER_BoletoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NombrePasajero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(76, 76, 76)
-                .addComponent(btnVENDER)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(jLabel5)
+                .addGap(35, 35, 35)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(NombrePasajero, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(btnVENDER, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
-        jLabel2.setText("Nombre del Pasajero: ");
-
         btnCANCELAR.setBackground(new java.awt.Color(255, 0, 0));
-        btnCANCELAR.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnCANCELAR.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnCANCELAR.setText("CANCELAR");
         btnCANCELAR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,30 +124,46 @@ public class AirPa extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        jLabel6.setText("Ingrese Nombre Del Pasajero:");
+
+        jLabel7.setBackground(new java.awt.Color(153, 0, 0));
+        jLabel7.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+        jLabel7.setText("CANCELACION DE BOLETOS");
+
         javax.swing.GroupLayout Cancelar_BLayout = new javax.swing.GroupLayout(Cancelar_B.getContentPane());
         Cancelar_B.getContentPane().setLayout(Cancelar_BLayout);
         Cancelar_BLayout.setHorizontalGroup(
             Cancelar_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Cancelar_BLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(Cancelar_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnCANCELAR)
+                .addGroup(Cancelar_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Cancelar_BLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(NombrePasajeroCANCELAR, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(85, Short.MAX_VALUE))
+                        .addGap(61, 61, 61)
+                        .addComponent(jLabel6))
+                    .addGroup(Cancelar_BLayout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(NombrePasajeroCANCELAR, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Cancelar_BLayout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(jLabel7)))
+                .addContainerGap(76, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Cancelar_BLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnCANCELAR, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51))
         );
         Cancelar_BLayout.setVerticalGroup(
             Cancelar_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Cancelar_BLayout.createSequentialGroup()
-                .addGap(108, 108, 108)
-                .addGroup(Cancelar_BLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(NombrePasajeroCANCELAR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
-                .addComponent(btnCANCELAR)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addComponent(jLabel7)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel6)
+                .addGap(26, 26, 26)
+                .addComponent(NombrePasajeroCANCELAR, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(btnCANCELAR, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout MOSTRAR_PASAJEROSLayout = new javax.swing.GroupLayout(MOSTRAR_PASAJEROS.getContentPane());
@@ -477,9 +507,11 @@ public class AirPa extends javax.swing.JFrame {
     private javax.swing.JButton btnCANCELAR;
     private javax.swing.JButton btnVENDER;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
